@@ -6,7 +6,7 @@
 #    By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 12:34:53 by imendonc          #+#    #+#              #
-#    Updated: 2022/11/21 12:52:46 by imendonc         ###   ########.fr        #
+#    Updated: 2022/11/21 13:31:10 by imendonc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,12 @@
 
 NAME		= libftprintf.a
 
+DIR_SRC	= ft_printf/src
+
 SRC			=
 
 OBJ			= $(SRC:.c=.o)
+
 
 #definicao dos parametros, compiler, flags etc
 
