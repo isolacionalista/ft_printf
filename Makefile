@@ -6,15 +6,13 @@
 #    By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 12:34:53 by imendonc          #+#    #+#              #
-#    Updated: 2022/11/25 16:18:35 by imendonc         ###   ########.fr        #
+#    Updated: 2022/11/28 13:59:48 by imendonc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #indica o nome do programa e onde vai buscar as coisas
 
 NAME		= libftprintf.a
-
-DIR_SRC		= /src
 
 SRC			=
 
