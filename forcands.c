@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   forcands.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 13:33:36 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 14:15:31 by imendonc         ###   ########.fr       */
+/*   Created: 2022/11/28 14:11:32 by imendonc          #+#    #+#             */
+/*   Updated: 2022/11/28 14:43:38 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-/*    GUIA PARA AS CONVERSOES
-c - printa um unico caracter (putchar)
-s - printa uma string (conjunto de caracteres) (putstr)
-p - um pointer tipo void tem de ser printado num formato hex
-d - printa um numero decimal de base 10
-i - print um int em base 10
-u - print um numero unsigned decimal se base 10
-x - printa um numero hex de base 16 em minusculas
-X - printa um numero hex de base 16 em maiuscula
-% - printa %
+/*  FUNCOES PARA %C E %S
+putchar para %c e putstr para %s
 */
 
 /*
@@ -31,4 +23,24 @@ para ser possivel a funcao dar a contagem correcta de
 caracteres no output
 */
 
-int ft_printf(const char *str, ...)
+void ft_putchar(char c, int *len)
+{
+    write(1, &c, 1);
+    (*len)++; 
+}
+
+//ascii 6 =  ACK - acknowledge
+
+void ft_putstr(char *str, int *len)
+{
+    size_t i;
+
+    i = 0;
+    if (!str)
+    {
+        write(1, "\0", 6);
+        *len += 6;
+    }
+    else
+        ft_putchar(str[i++], len);
+}

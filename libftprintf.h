@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:53:29 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 13:48:25 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/28 14:01:25 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ possivel de o usar ou alterar
 tem de ser usado no final de uma inicializacao de um ap para ter um 
 comportamento certo 
 */
+
 #endif
