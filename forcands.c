@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 14:11:32 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 14:43:38 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:53:29 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,24 @@ para ser possivel a funcao dar a contagem correcta de
 caracteres no output
 */
 
-void ft_putchar(char c, int *len)
+void	ft_putchar(char c, int *len)
 {
-    write(1, &c, 1);
-    (*len)++; 
+	write(1, &c, 1);
+	(*len)++;
 }
 
 //ascii 6 =  ACK - acknowledge
 
-void ft_putstr(char *str, int *len)
+void	ft_putstr(char *str, int *len)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    if (!str)
-    {
-        write(1, "\0", 6);
-        *len += 6;
-    }
-    else
-        ft_putchar(str[i++], len);
+	i = 0;
+	if (!str)
+	{
+		write(1, "\0", 6);
+		*len += 6;
+	}
+	else
+		ft_putchar(str[i++], len);
 }

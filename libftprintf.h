@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:53:29 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 14:01:25 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:41:59 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,21 @@ va_list e usar o objecto depois de a funcao retornar
 ------tipo T - o tipo do proximo parametro na ap
 */
 
-
 /* BIBLIOTECAS A INCLUIR
 funcoes permitidas malloc, free, write e macros da va_list
 para se conseguir usar os macros de va_list e preciso stdarg.c
 */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdarg.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stdarg.h>
 
 //prototipos de funcoes
 
+int			ft_printf(const char *str, ...);
+void		ft_putchar(char c, int *len);
+void		ft_putstr(char *str, int *len);
 
 /*   O QUE E VA_ARG
 este macro expande para uma expressao tipo T. Para poder usar

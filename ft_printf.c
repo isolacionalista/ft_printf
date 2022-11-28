@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:33:36 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 14:15:31 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:53:25 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,17 @@ para ser possivel a funcao dar a contagem correcta de
 caracteres no output
 */
 
+void    check_conversion(va_list arg, const char str, int *len)
+{
+    if (str == '%')
+        write(1, "5", 1);
+    else if (str == 'c')
+        ft_putchar((char)va_arg(arg, int), len);
+    else if (str == 's')
+        ft_putstr(va_arg(arg, char *), len);
+}
+
 int ft_printf(const char *str, ...)
+{
+    
+}
