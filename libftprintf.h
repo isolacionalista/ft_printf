@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:53:29 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 13:36:35 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/28 13:48:16 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,27 @@ para a proxima variavel do argumento
 se o proximo argumento do ap nao for cmpativel com T, vai ter um
 comportamento indefinido a nao ser que:
 -------- um tipo seja int e o outro unsigned int
---------ou um tipo e um void pointer e o outro pointer e um caracter
+-------- ou um tipo e um void pointer e o outro pointer e um caracter
 */
 
+/*   O QUE E VA_START
+este macro e usado para iniciar o ap de uma va_list.
+apenas o primeiro argumento passado para start e avaliado,
+qualquer argumento subsequente nao e expandido ou usado 
+*/
+
+/*   O QUE E VA_COPY
+este macro copia o valor de source(origem) para o dest(destino)
+o macro end deve ser usado em dest antes da funcao retornar
+ou re-inicializacao do dest 
+----------dest - uma instancia do va_list para inicializar
+----------src - a origem para poder inicializar dest
+*/
+
+/*   O QUE E VA_END
+este macro e usado para finalizar e modificar um objecto ap para nao ser mais
+possivel de o usar ou alterar
+tem de ser usado no final de uma inicializacao de um ap para ter um 
+comportamento certo 
+*/
 #endif
