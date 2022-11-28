@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:53:29 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 15:41:59 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:55:37 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ para se conseguir usar os macros de va_list e preciso stdarg.c
 //prototipos de funcoes
 
 int			ft_printf(const char *str, ...);
+void		check_conversion(va_list arg, const char str, int *len);
 void		ft_putchar(char c, int *len);
 void		ft_putstr(char *str, int *len);
 
