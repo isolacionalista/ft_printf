@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:33:36 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/29 13:07:27 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/29 13:43:58 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,12 @@ void	check_conversion(va_list arg, const char str, int *len)
 		ft_putchar((char)va_arg(arg, int), len);
 	else if (str == 's')
 		ft_putstr(va_arg(arg, char *), len);
-    else if (str == 'p')
-        (va_arg(arg, void *), len);
+	else if (str == 'p')
+		(va_arg(arg, void *), len);
 	else if (str == 'd')
 		ft_putnbr(va_arg(arg, int), len);
+	else if (str == 'u')
+		ft_putun(va_arg(arg, unsigned int), len);
 }
 
 int ft_printf(const char *str, ...)

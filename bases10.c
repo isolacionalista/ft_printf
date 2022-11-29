@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:05:52 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/29 13:23:22 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/29 13:38:09 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 /* 
 para funcoes de base 10
      -------- PUTNBR --------
-%d - printa um numero decimal de base 10
-      
+%d - printa um numero decimal de base 10 
+    --------- PUTUN ---------
+%u - print um numero unsigned decimal se base 10
 */
 
 /*
@@ -26,7 +27,6 @@ para ser possivel a funcao dar a contagem correcta de
 caracteres no output
 */
 
-
 void	ft_putnbr(int nbr, int *len)
 {
 	if (nbr == "-2147483648")
@@ -35,7 +35,7 @@ void	ft_putnbr(int nbr, int *len)
 	{
 		ft_putchar("-", len);
 		nbr *= -1;
-		ft_putchar(nbr, len);
+		ft_putnbr(nbr, len);
 	}
 	else if (nbr > 9)
 	{
@@ -43,5 +43,21 @@ void	ft_putnbr(int nbr, int *len)
 		ft_putnbr((nbr % 10), len);
 	}
 	else
-		ft_putstr((nbr + 48), len);
+		ft_putchar((nbr + 48), len);
+}
+
+/*
+-----
+putun - putnbr mas em unsigned
+-----
+*/
+void	ft_putun(unsigned int nbr, int *len)
+{
+	if (nbr > 9)
+	{
+		ft_putun((nbr / 10), len);
+		ft_putun((nbr % 10), len);
+	}
+	else
+		ft_putchar((nbr + 48), len);
 }
