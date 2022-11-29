@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:53:29 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 16:07:28 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/29 13:19:20 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int			ft_printf(const char *str, ...);
 void		check_conversion(va_list arg, const char str, int *len);
 void		ft_putchar(char c, int *len);
 void		ft_putstr(char *str, int *len);
+int			ft_putnbr(int nbr,int len);
 
 /*   O QUE E VA_ARG
 este macro expande para uma expressao tipo T. Para poder usar

@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 14:11:32 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/28 16:07:32 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/11/29 13:25:48 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 /*  FUNCOES PARA %C E %S
 putchar para %c e putstr para %s
+  ------- PUTCHAR -------
+%c - printa um unico caracter
+  -------- PUTSTR -------
+%s - printa uma string (conjunto de caracteres)
 */
 
 /*
@@ -29,7 +33,11 @@ void	ft_putchar(char c, int *len)
 	(*len)++;
 }
 
-//ascii 6 =  ACK - acknowledge
+/*
+------
+ascii 6 =  ACK - acknowledge
+------
+*/
 
 void	ft_putstr(char *str, int *len)
 {

@@ -6,7 +6,7 @@
 #    By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 12:34:53 by imendonc          #+#    #+#              #
-#    Updated: 2022/11/28 16:07:09 by imendonc         ###   ########.fr        #
+#    Updated: 2022/11/29 13:21:38 by imendonc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 NAME		= libftprintf.a
 
-SRC			= ft_printf.c forcands.c bases10.c
+SRC			= ft_printf.c forcands.c bases10.c pointers.c
 
 OBJ			= $(SRC:.c=.o)
 
