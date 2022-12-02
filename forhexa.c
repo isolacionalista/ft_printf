@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:27:31 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/30 12:58:37 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/02 13:40:40 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ os valores para representarem caracteres numa base hexa
 variam entre o 0-9 e de a-f
 */
 
-void hexa_check(unsigned int nbr, char hex,int *len)
+void hexa_check(unsigned int nbr, char hex, int *len)
 {
     char *base;
 
-    base = "0123456789abcdef";
-
     if (hex == 'X')
         base = "0123456789ABCDEF"
-    else if (nbr < 16)
+    else
+        base = "0123456789abcdef";
+    if (nbr < 16)
         ft_putchar((base[nbr % 16], len);
     else
     {

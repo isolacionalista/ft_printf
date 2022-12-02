@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:53:29 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/29 13:44:19 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/02 13:40:48 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void		ft_putchar(char c, int *len);
 void		ft_putstr(char *str, int *len);
 void		ft_putnbr(int nbr, int len);
 void		ft_putun(unsigned int nbr, int len);
+void		hexa_check(unsigned int nbr, char hex, int *len); 
 
 /*   O QUE E VA_ARG
 este macro expande para uma expressao tipo T. Para poder usar
