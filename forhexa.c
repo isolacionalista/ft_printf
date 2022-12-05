@@ -6,11 +6,11 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:27:31 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/02 13:40:40 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/05 13:27:28 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 /*
 para todas as funcoes que imprimem numeros
@@ -37,12 +37,12 @@ void hexa_check(unsigned int nbr, char hex, int *len)
 {
     char *base;
 
-    if (hex == 'X')
-        base = "0123456789ABCDEF"
-    else
+    if (hex == 'x')
         base = "0123456789abcdef";
+    else
+        base = "0123456789ABCDEF";        
     if (nbr < 16)
-        ft_putchar((base[nbr % 16], len);
+        ft_putchar((base[nbr % 16]), len);
     else
     {
         hexa_check((nbr / 16), hex, len);

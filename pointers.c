@@ -6,11 +6,11 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:11:58 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/02 13:40:35 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/05 13:28:31 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 /*
 para a conversao p
@@ -33,11 +33,30 @@ static void hexa_forp(size_t nbr, int *len)
 
     base = "0123456789abcdef";
     if (nbr < 16)
-        ft_putchar(base[nbr % 16], len);
+        ft_putchar((base[nbr % 16]), len);
     else
     {
         hexa_forp((nbr / 16), len);
         hexa_forp((nbr % 16), len);
     }
 }
+
+void    ft_putp(const void *p, int *len)
+{
+    size_t pointer;
+
+    pointer = (size_t)p;
+    if (pointer == 0)
+    {
+        *len += write(1, "(nil)", 5);
+        return ;
+    }
+    ft_putstr("0x", len);
+    hexa_forp(pointer, len);
+}
+
+/*
+nil e o termo correcto para descrever quando um pointer aponta
+para null
+*/
 

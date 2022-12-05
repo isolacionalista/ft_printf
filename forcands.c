@@ -6,11 +6,11 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 14:11:32 by imendonc          #+#    #+#             */
-/*   Updated: 2022/11/29 13:25:48 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/05 13:27:17 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 /*  FUNCOES PARA %C E %S
 putchar para %c e putstr para %s
@@ -43,12 +43,15 @@ void	ft_putstr(char *str, int *len)
 {
 	size_t	i;
 
-	i = 0;
 	if (!str)
 	{
-		write(1, "\0", 6);
+		write(1, "(null)", 6);
 		*len += 6;
 	}
 	else
-		ft_putchar(str[i++], len);
+	{
+		i = 0;
+		while (str[i])
+			ft_putchar(str[i++], len);
+	}
 }

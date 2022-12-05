@@ -6,7 +6,7 @@
 #    By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 12:34:53 by imendonc          #+#    #+#              #
-#    Updated: 2022/12/02 12:56:44 by imendonc         ###   ########.fr        #
+#    Updated: 2022/12/05 13:28:56 by imendonc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ CC				= cc
 RM				= rm -f
 
 CFLAGS		= -Wall -Werror -Wextra
+
 
 #definicao dos comandos, o que fazem e a que ficheiros
 

@@ -6,11 +6,11 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:33:36 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/02 13:41:48 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/05 13:36:13 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 /*    GUIA PARA AS CONVERSOES
 c - printa um unico caracter (putchar)
@@ -46,7 +46,7 @@ void	check_conversion(va_list arg, const char str, int *len)
 	else if (str == 's')
 		ft_putstr(va_arg(arg, char *), len);
 	else if (str == 'p')
-		ft_putpo(va_arg(arg, void *), len);
+		ft_putp(va_arg(arg, void *), len);
 	else if ((str == 'd') || (str == 'i'))
 		ft_putnbr(va_arg(arg, int), len);
 	else if (str == 'u')
@@ -61,5 +61,22 @@ void	check_conversion(va_list arg, const char str, int *len)
 
 int ft_printf(const char *str, ...)
 {
+	va_list arg;
+	int len;
 
+	len = 0;
+	va_start(arg, str);
+	while (*str)
+	{
+		if (*str == '%')
+		{
+			str++;
+			check_conversion(arg, *str, &len);
+		}
+		else
+			ft_putchar(*str, &len);
+		str++;
+	}
+	va_end(arg);
+	return (len);
 }
